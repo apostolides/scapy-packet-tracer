@@ -18,4 +18,7 @@ while True:
     if new_source != current_source:
         current_source = new_source
         country_details = utils.country_from_ip(current_source)
-        print(f'[*] IP: {current_source} Country: {country_details["country_name"]} | City: {country_details["city"]} | Region: {country_details["region"]}')
+        try:
+            print(f'[*] IP: {current_source} Country: {country_details["country_name"]} | City: {country_details["city"]} | Region: {country_details["region"]}')
+        except:
+            print(f'[*] IP: {current_source}')
